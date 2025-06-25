@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Seller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      animation: slideDown 1s ease-in-out;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #4CAF50;
+    }
+    .section {
+      padding: 2rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .property {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .property:hover {
+      transform: translateY(-5px);
+    }
+    .property img {
+      width: 100%;
+      border-radius: 6px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.75rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Property Seller</h1>
+    <p>Sell Your Land Directly with Us</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div id="home" class="section">
+    <h2>Available Properties</h2>
+    <div class="properties">
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200" alt="Property 1">
+        <h3>Plot A - ₹15,00,000</h3>
+        <p>1000 sq. ft. land in Sector A. Prime location and road-facing.</p>
+      </div>
+      <div class="property">
+        <img src="https://via.placeholder.com/300x200" alt="Property 2">
+        <h3>Plot B - ₹18,00,000</h3>
+        <p>1200 sq. ft. near school, ready for immediate sale.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a trusted family-owned business selling our own properties in this colony. No brokers, no middlemen – direct and transparent deals only for our own land.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <input type="file" accept="image/*" />
+      <button type="submit">Send</button>
+    </form>
+    <p style="text-align: center; margin-top: 1rem;">Or email us directly at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p style="text-align: center;">Or call us: <strong>+91-XXXXXXXXXX</strong></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Property Seller. All rights reserved.</p>
+  </footer>
+</body>
+</html>
